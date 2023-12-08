@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First GitHub Pages Website</title>
+    <title>Shorthand Exam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>Welcome to my GitHub Pages website.</p>
+    <div>
+        <!-- Place your code for the overlay here if audioEnded is true -->
+        <div class="title-bar">
+            <div class="info-title">
+                <img src="GCC-TBC.png" alt="GCC-TBC" />
+            </div>
+            <h1>
+                Audio Session Passage A
+            </h1>      
+        </div>
+        
+        <div class="student-info">
+            <div class="student-photo">
+                <!-- Student photo here -->
+            </div>
+            <div class="student-details">
+                <p class="student-name"><strong>Login ID: UserId</strong></p>
+                <!-- Replace UserId with actual User ID -->
+            </div>
+        </div>
+        <div class="instruction">
+            <p>Audio will start automatically. This audio cannot be paused, rewind and started again. Do not refresh / close during audio playtime. If audio stop in-between then only click on ▶️ play button. <br />
+            ऑडियो आपोआप सुरु होईल, ऑडियो मध्ये थांबवता येणार नाही, पुन्हा ऐकता येणार नाही. ऑडियो सुरु असतांना रिफ्रेश / क्लोज करू नये. जर ऑडियो मध्ये थांबली तर ▶️ play बटन वर क्लिक करावे.</p>
+        </div>
+    
+        <div class="audio-player">
+            <!-- You would need to handle the ref and src attributes using JavaScript -->
+            <audio id="audio" src="" preload="metadata"></audio>
+    
+            <div class="audio-controls">
+                <!-- You would need to handle the showPlayButton condition, startPlaying function, and the isPlaying condition using JavaScript -->
+                <div id="play-pause" class="play" onclick="startPlaying()">
+                    <i id="play-icon" class="fas fa-play"></i>
+                    <i id="pause-icon" class="fas fa-pause" style="display: none;"></i>
+                </div>
+                <div class="audio-progress">
+                    <!-- You would need to handle the progress value using JavaScript -->
+                    <progress id="progress-bar" max="100" value="0"></progress>
+                    <div id="percentage">0%</div>
+                </div>
+            </div>
+            <!-- You would need to handle the isPlaying and audioEnded conditions using JavaScript -->
+            <!-- You would also need to replace visualGif with the actual URL to your GIF -->
+            <img id="visualizer" src="visual.gif" alt="Audio visualizer" />
+        </div>
+        <script>
+            function startPlaying() {
+                var playIcon = document.getElementById('play-icon');
+                var pauseIcon = document.getElementById('pause-icon');
+                
+                if (playIcon.style.display === "none") {
+                    playIcon.style.display = "block";
+                    pauseIcon.style.display = "none";
+                } else {
+                    playIcon.style.display = "none";
+                    pauseIcon.style.display = "block";
+                }
+                
+            }
+        </script>
+    </div>
 </body>
 </html>
